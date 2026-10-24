@@ -1,0 +1,17 @@
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.sqlite3-*
+*.db
+models/
+data/foodsg233_subset/
+data/external_photos/
+data/foodsg-233.zip*
+*.part
+*.log

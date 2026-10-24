@@ -1,0 +1,5 @@
+-r requirements.txt
+numpy>=1.24,<3.0
+torch==2.14.1
+torchvision==0.29.1
+safetensors>=0.7,<1

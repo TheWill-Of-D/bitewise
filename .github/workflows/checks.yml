@@ -1,0 +1,28 @@
+name: BiteWise checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    env:
+      OMP_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install torch==2.14.1 torchvision==0.29.1 --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -r requirements-model.txt
+      - name: Install and verify pretrained model
+        run: python setup_model.py
+      - name: Check dependencies and workflows
+        run: |
+          python -m pip check
+          python -m unittest discover -s tests -v

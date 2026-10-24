@@ -1,0 +1,21 @@
+{
+  "repo_id": "shalev396/foodvision-big",
+  "revision": "3b889d4a42f86ff64087d3a4354c0e5a330c208f",
+  "architecture": "efficientnet_b2",
+  "dataset": "Food-101",
+  "license": "MIT",
+  "artifacts": {
+    "config.json": {
+      "sha256": "fb00204b2069a8f485a822e8108d20d965c3c995123da538d51e088b92b794f9",
+      "size": 1956
+    },
+    "model.safetensors": {
+      "sha256": "89f33ec32e9e307f97e5dfe0cd3a3d280409f8a413c36fd9d8248fa743fee1da",
+      "size": 31698268
+    },
+    "LICENSE": {
+      "sha256": "4f981de7b3e6fa60f33796a05441986327dd0cc186f31e1e3ea4c9f69f773fac",
+      "size": 1073
+    }
+  }
+}
